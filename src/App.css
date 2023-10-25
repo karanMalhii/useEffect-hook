@@ -1,0 +1,11 @@
+.myCard{
+    background-color: palegoldenrod !important;
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
