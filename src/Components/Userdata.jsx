@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import useApi from "../hooks/useApi";
+// import useApi from "../hooks/useApi";
+import test from "../hooks/test";
 // import data from "../../data/users.json";
 import Data from "../Components/Data";
 
@@ -12,13 +13,13 @@ export default function Userdata() {
     data: users,
     loading: usersLoading,
     error: usersApiError,
-  } = useApi("https://fakestoreapi.com/users");
+  } = test("https://fakestoreapi.com/users");
   
   const {
     data: todos,
     loading: todosLoading,
     error: todosApiError,
-  } = useApi("https://jsonplaceholder.typicode.com/todos");
+  } = test("https://jsonplaceholder.typicode.com/todos");
 
   return (
     <div>
