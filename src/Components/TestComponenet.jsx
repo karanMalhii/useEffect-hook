@@ -15,7 +15,8 @@ export default function TestComponenet() {
         <hr />
 
         {todosApiError == null ? (
-          <>
+          //react fragmentaion <> </>
+          <> 
             {todosLoading == true ? (
               <h2>Loading....</h2>
             ) : (
