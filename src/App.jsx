@@ -6,6 +6,7 @@ import Userdata from './Components/Userdata'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Counter from './Components/Counter'
+import Form from './Components/form'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,10 @@ function App() {
   return (
     <>
     <h2>This is app.jsx</h2>
-    <Counter/>
+    {/* <Counter/> */}
     {/* <Button variant="primary">Primary</Button>{' '} */}
      {/* <Userdata/> */}
+     <Form/>
     </>
   )
 }
