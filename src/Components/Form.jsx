@@ -1,3 +1,4 @@
+import { Alert } from "bootstrap";
 import React, { useState } from "react";
 
 export default function Form() {
@@ -12,7 +13,9 @@ export default function Form() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log({firstName,lastName,age,gender,city})
+          // console.log({"first name is ":firstName,"last name is ":lastName,"Age is ":age,"Gender is ": gender,"City is":city})
+          const message = `First name is: ${firstName}\nLast name is: ${lastName}\nAge is: ${age}\nGender is: ${gender}\nCity is: ${city}`;
+          alert(message);
         }}
       >
         <div className="row">
