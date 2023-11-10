@@ -1,52 +1,89 @@
 import React, { useState } from "react";
 
 export default function Form() {
-  const [data, setData] = useState("");
-
+  const [firstName, setFirstName] = useState(" ");
+  const [lastName, setLastName] = useState(" ");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("male");
+  const [city, setCity] = useState("asr");
 
   return (
     <div>
-      <form onSubmit={(e) => setData(e.target.value)}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log({firstName,lastName,age,gender,city})
+        }}
+      >
         <div className="row">
           <label htmlFor="fname">First name:</label>
-          <input type="text" name="fname" id="fname" />
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
         </div>
 
         <div className="row">
           <label htmlFor="lname">Last name:</label>
-          <input type="text" name="lname" id="lname" />
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
         </div>
 
         <div className="row">
           <label htmlFor="age">Age:</label>
-          <input type="number" name="age" id="age" />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
         </div>
 
         <div className="row">
           <label htmlFor="">Gender:</label>
           <label htmlFor="male">male</label>
-          <input type="radio" name="male" id="male" />
+          <input
+            type="radio"
+            name="gender"
+            value={"male"}
+            id="male"
+            onChange={(e) => setGender(e.target.value)}
+          />
           <label htmlFor="female">female</label>
-          <input type="radio" name="female" id="female" />
+          <input
+            type="radio"
+            name="gender"
+            value={"female"}
+            id="female"
+            onChange={(e) => setGender(e.target.value)}
+          />
         </div>
 
         <div className="row">
           <label htmlFor="city">City:</label>
-          <select name="city" id="city">
-            <option value="">Asr</option>
-            <option value="">Jal</option>
-            <option value="">Ludh</option>
-            <option value="">Gurp</option>
+          <select
+            name="city"
+            id="city"
+            onChange={(e) => setCity(e.target.value)}
+          >
+            <option value="asr">Asr</option>
+            <option value="jal">Jal</option>
+            <option value="ldh">Ludh</option>
+            <option value="gurp">Gurp</option>
           </select>
         </div>
 
         <div className="btn">
-          <input
-            type="submit"
-            value="Submit"
-            id="btn"
-            onSubmit={(e) => setData(e.target.value)}
-          />
+          <input type="submit" value="Submit" id="btn" />
         </div>
       </form>
     </div>
