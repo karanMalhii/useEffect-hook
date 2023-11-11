@@ -18,7 +18,9 @@ function App() {
     {/* <Button variant="primary">Primary</Button>{' '} */}
       {/* <Userdata/> */}
       <p>Bikram work</p>
-      <TestComponenet/>
+      {/* <TestComponenet /> */}
+      <Form/>
+      
     </>
   )
 }
