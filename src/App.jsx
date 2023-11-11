@@ -7,7 +7,7 @@ import TestComponenet from "./Components/testComponenet"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Counter from './Components/Counter'
-import Form from './Components/form'
+import FormTwo from './Components/FormTwo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +19,7 @@ function App() {
       {/* <Userdata/> */}
       <p>Bikram work</p>
       {/* <TestComponenet /> */}
-      <Form/>
+      <FormTwo/>
       
     </>
   )
