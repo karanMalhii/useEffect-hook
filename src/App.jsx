@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Counter from './Components/Counter'
 import FormTwo from './Components/FormTwo'
+import CounterTwo from './Components/CounterTwo';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,8 @@ function App() {
       {/* <Userdata/> */}
       <p>Bikram work</p>
       {/* <TestComponenet /> */}
-      <FormTwo/>
+      {/* <FormTwo/> */}
+      <CounterTwo/>
       
     </>
   )
