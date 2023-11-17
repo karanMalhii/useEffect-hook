@@ -8,7 +8,15 @@ const reducer = (state, action) => {
       counter: state.counter + 1,
     };
   }
-  return state
+  else if(action.type == "Decrement") {
+    return {
+      ...state,
+      counter: state.counter - 1,
+    };
+  }
+  else {
+    return state
+  }
 };
 
 const initialState = {
@@ -27,7 +35,9 @@ export default function CounterTwo() {
       <button onClick={() => dispatch({ type: "increment", payload: 1 })}>
         +
       </button>
-      <button onClick={() => setcounter(counter - 1)}>-</button>
+      <button onClick={() => dispatch({ type: "Decrement", payload: 1 })}>
+        -
+      </button>
     </div>
   );
 }
