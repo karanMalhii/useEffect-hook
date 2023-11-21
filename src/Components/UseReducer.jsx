@@ -7,6 +7,13 @@ const reducer = (state, action) => {
       counter: state.counter + 1,
     };
   } else if (action.key == "decrement") {
+    if (state.counter <= 0) {
+      alert("Counter cannot be negative");
+      return {
+        ...state,
+        counter: 0,
+      };
+    }
     return {
       ...state,
       counter: state.counter - 1,
@@ -39,7 +46,7 @@ export default function UseReducer() {
       <button onClick={() => dispatch({ key: "increment", payload: 1 })}>
         +
       </button>
-      <button onClick={() => dispatch({ key: "decrement", payload: 2 })}>
+      <button onClick={() => dispatch({ key: "decrement", payload: 1 })}>
         -
       </button>
       <button onClick={() => dispatch({ key: "Reset"})}>
