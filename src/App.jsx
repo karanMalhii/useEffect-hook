@@ -11,6 +11,7 @@ import FormTwo from "./Components/FormTwo";
 import CounterTwo from "./Components/CounterTwo";
 import UseReducer from "./Components/UseReducer";
 import Bikramcounter from "./Components/Bikramcounter";
+import FirstExample from "./Components/useRefExamples/FirstExample";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,7 +26,8 @@ function App() {
       {/* <FormTwo/> */}
       {/* <CounterTwo/> */}
       {/* <UseReducer /> */}
-      <Bikramcounter/>
+      {/* <Bikramcounter/> */}
+      <FirstExample />
     </>
   );
 }
