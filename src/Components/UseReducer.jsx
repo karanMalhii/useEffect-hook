@@ -12,7 +12,7 @@ export default function UseReducer() {
       <button onClick={() => dispatch({ key: "increment", payload: 1 })}>
         +
       </button>
-      <button onClick={() => dispatch({ key: "decrement", payload: 2 })}>
+      <button onClick={() => dispatch({ key: "decrement", payload: 1 })}>
         -
       </button>
       <button onClick={() => dispatch({ key: "Reset"})}>
