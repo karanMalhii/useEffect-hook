@@ -2,13 +2,13 @@ import { Alert } from "bootstrap";
 import React, { useState, useReducer } from "react";
 
 const reducer = (state, action) => {
-  console.log({state, action});
+  console.log({ state, action });
 
-  switch(action.type){
+  switch (action.type) {
     case "firstName":
-      return { ...state, firstName : action.data}
+      return { ...state, firstName: action.data };
     case "lastName":
-      return { ...state, lastName : action.data}
+      return { ...state, lastName: action.data };
     default:
       return state;
   }
@@ -23,14 +23,13 @@ const initalFormState = {
 };
 
 export default function FormTwo() {
-
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("male");
   const [city, setCity] = useState("asr");
 
   const [formState, dispatch] = useReducer(reducer, initalFormState);
 
-  console.log({formState});
+  console.log({ formState });
 
   return (
     <div>
@@ -45,14 +44,14 @@ export default function FormTwo() {
         <div className="row">
           <label htmlFor="fname">First name:</label>
           <input
-            type="text"
+            type="text" 
             name="fname"
             id="fname"
             value={formState?.firstName}
             onChange={(event) => {
               dispatch({
-                type : "firstName",
-                data : event.target.value
+                type: "firstName",
+                data: event.target.value,
               });
             }}
           />
@@ -67,8 +66,8 @@ export default function FormTwo() {
             value={formState?.lastName}
             onChange={(event) => {
               dispatch({
-                type : "lastName",
-                data : event.target.value
+                type: "lastName",
+                data: event.target.value,
               });
             }}
           />
@@ -122,6 +121,7 @@ export default function FormTwo() {
         <div className="btn">
           <input type="submit" value="Submit" id="btn" />
         </div>
+        
       </form>
     </div>
   );
