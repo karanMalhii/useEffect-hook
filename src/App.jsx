@@ -29,6 +29,7 @@ function App() {
       {/* <FormTwo/> */}
       {/* <CounterTwo/> */}
       {/* <UseReducer /> */}
+      <Form/>
       {/* <Bikramcounter/> */}
       {/* <FirstExample /> */}
       <SecondExample/>
