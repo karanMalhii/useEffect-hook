@@ -1,36 +1,5 @@
 import React, { useReducer } from "react";
-
-const reducer = (state, action) => {
-  if (action.key == "increment") {
-    return {
-      ...state,
-      counter: state.counter + 1,
-    };
-  } else if (action.key == "decrement") {
-    if (state.counter == 0) {
-     
-      return state;
-    }
-    return {
-      ...state,
-      counter: state.counter - 1,
-    };
-  } else if (action.key == "Reset") {
-    return {
-      ...state,
-      counter: 0,
-    };
-  } else {
-    return state;
-  }
-
-  // console.log(state)
-  // console.log(action)
-};
-
-const initialState = {
-  counter: 0,
-};
+import {initialState, reducer} from  './../utils/reducerExample';
 
 export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -49,6 +18,19 @@ export default function UseReducer() {
       <button onClick={() => dispatch({ key: "Reset"})}>
         Reset
       </button>
+      <hr />
+      
+      <input type="text" onChange={(event) => dispatch({ key : "firstName", payload : event.target.value })} 
+      value={state.firstName}
+      />
+      <p>FirstName : {state.firstName}</p>
+      
+      <hr />
+      
+      <input type="text" onChange={(event) => dispatch({ key : "lastName", payload : event.target.value })}
+       value={state.lastName}
+       />
+      <p>LastName : {state.lastName}</p>
     </div>
   );
 }
