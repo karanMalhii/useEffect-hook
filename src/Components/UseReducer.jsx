@@ -7,12 +7,9 @@ const reducer = (state, action) => {
       counter: state.counter + 1,
     };
   } else if (action.key == "decrement") {
-    if (state.counter <= 0) {
-      alert("Counter cannot be negative");
-      return {
-        ...state,
-        counter: 0,
-      };
+    if (state.counter == 0) {
+     
+      return state;
     }
     return {
       ...state,
