@@ -29,10 +29,10 @@ function App() {
       {/* <FormTwo/> */}
       {/* <CounterTwo/> */}
       {/* <UseReducer /> */}
-      <Form/>
+      {/* <Form/> */}
       {/* <Bikramcounter/> */}
-      {/* <FirstExample /> */}
-      <SecondExample/>
+      <FirstExample />
+      {/* <SecondExample/> */}
     </>
   );
 }
